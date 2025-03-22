@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const commander_1 = require("commander");
-const create_1 = require("../commands/create");
-const chalk_1 = __importDefault(require("chalk"));
 const path_1 = __importDefault(require("path"));
+const chalk_1 = __importDefault(require("chalk"));
+const commander_1 = require("commander");
+const create_js_1 = require("../commands/create.js");
 const program = new commander_1.Command();
 program
     .name('my-workshop')
@@ -21,7 +21,7 @@ program
     .option('-t, --template <template>', 'Template to use', 'basic')
     .action(async (name, options) => {
     try {
-        await (0, create_1.create)({ name, ...options });
+        await (0, create_js_1.create)({ name, ...options });
     }
     catch (error) {
         console.error(chalk_1.default.red(`Error: ${error instanceof Error ? error.message : String(error)}`));
@@ -34,8 +34,8 @@ program
     .option('-p, --port <port>', 'Port to listen on', '3000')
     .action(async (options) => {
     try {
-        const corePath = path_1.default.resolve(__dirname, '../../../core/dist/bin/start');
-        const coreBin = require(corePath);
+        const corePath = path_1.default.resolve(__dirname, '../../../core/dist/bin/start.js');
+        const coreBin = await import(corePath);
         process.env.PORT = options.port;
         await coreBin.start();
     }

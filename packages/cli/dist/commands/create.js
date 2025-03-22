@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.create = create;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
-const templates_1 = require("../utils/templates");
+const templates_js_1 = require("../utils/templates.js");
 /**
  * Создание нового воркшопа
  * @param options Опции создания
@@ -21,7 +21,7 @@ async function create(options) {
     // Создаем директорию
     fs_1.default.mkdirSync(workshopDir, { recursive: true });
     // Копируем шаблон
-    await (0, templates_1.copyTemplate)(template, workshopDir);
+    await (0, templates_js_1.copyTemplate)(template, workshopDir);
     console.log(`Workshop "${name}" created successfully at ${workshopDir}`);
 }
 //# sourceMappingURL=create.js.map
