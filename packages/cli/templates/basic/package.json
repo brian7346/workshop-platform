@@ -1,0 +1,25 @@
+{
+  "name": "workshop-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "my-workshop start",
+    "dev": "my-workshop start --watch"
+  },
+  "dependencies": {
+    "@my-workshop/core": "^1.0.0"
+  },
+  "workshop": {
+    "title": "My Workshop",
+    "author": {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    },
+    "exercisesDir": "exercises",
+    "features": {
+      "playground": true,
+      "tests": true,
+      "chat": false
+    }
+  }
+} 

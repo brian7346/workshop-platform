@@ -1,0 +1,1 @@
+{"version":3,"file":"start.js","sourceRoot":"","sources":["../../src/commands/start.ts"],"names":[],"mappings":";;AAYA,sBAQC;AAZD;;;GAGG;AACI,KAAK,UAAU,KAAK,CAAC,UAAwB,EAAE;IACpD,MAAM,EAAE,IAAI,GAAG,IAAI,EAAE,GAAG,OAAO,CAAC;IAEhC,OAAO,CAAC,GAAG,CAAC,oCAAoC,IAAI,EAAE,CAAC,CAAC;IAExD,kEAAkE;IAElE,OAAO,CAAC,GAAG,CAAC,+CAA+C,IAAI,EAAE,CAAC,CAAC;AACrE,CAAC"}

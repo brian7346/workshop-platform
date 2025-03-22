@@ -1,0 +1,23 @@
+{
+  "name": "my-workshop-platform",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "node packages/core/dist/bin/start.js",
+    "dev": "nodemon packages/core/dist/bin/start.js",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "keywords": [
+    "workshop", 
+    "education", 
+    "tutorial", 
+    "platform"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "description": "A platform for creating interactive coding workshops"
+}
